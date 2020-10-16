@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAutomation" verbose="1">
+
+    <parameter name="FirstParameter" value="Test"></parameter>
+    <parameter name="SecondParameter" value="Test"></parameter>
+
+  <!--  <test name="DataProviders">
+        <groups>
+            <run>
+
+                <include name="dataProvider"></include>
+                &lt;!&ndash;                <include name="all"></include>&ndash;&gt;
+                &lt;!&ndash;                <exclude name="dataProvider"></exclude>&ndash;&gt;
+            </run>
+        </groups>
+        <classes>
+            <class name="dataProvider.TestWithDataProvider"></class>
+        </classes>
+    </test>-->
+
+    <test name="Requests">
+        <groups>
+            <run>
+                <include name="all"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="apiTesting.GetMethodsUsers"></class>
+            <class name="apiTesting.PostMethodsUsers"></class>
+            <class name="apiTesting.RemoveEven"></class>
+        </classes>
+    </test>
+</suite>
