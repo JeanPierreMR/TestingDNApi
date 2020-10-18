@@ -4,14 +4,13 @@ import apiTestingAuxClasses.RequestMaker;
 import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.testng.annotations.Test;
-import static io.restassured.RestAssured.given;
 
-public class GetMethodsUsers {
+public class GetMethodsCompanies {
 
-    @Test(groups = {"all",  "getMethods", "getAllUsers", "users"}, description = "getAllUsers API")
+    @Test(groups = {"all",  "getMethods", "getAllUsers", "companies"}, description = "getAllCompanies API")
     public void getAllUsers(){
-        String base = "http://localhost:5000/users/";
-        //String base2 = "http://localhost:5000/companies/";
+//        String base = "http://localhost:5000/users/";
+        String base = "http://localhost:5000/companies/";
         String url = base + "all/";
         Response response = RequestMaker.makeGetRequest(url);
         String responseString = response.asString();

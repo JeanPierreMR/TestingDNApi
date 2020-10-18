@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class PostMethodsUsers {
-    @Test(groups = {"all", "postMethod", "createNewUser", "users"}, description = "createNewUser API", dataProvider = "getBodyContent")
+public class PostMethodsCompanies {
+    @Test(groups = {"all", "postMethod", "createNewUser", "companies"}, description = "createNewCompanies API", dataProvider = "getBodyContent")
     public void createNewUser(String bodyContent){
-        String base = "http://localhost:5000/users/";
-        //String base2 = "http://localhost:5000/companies/";
+//        String base = "http://localhost:5000/users/";
+        String base = "http://localhost:5000/companies/";
         String url = base + "add/";
         Response response = RequestMaker.makePostRequest(url, bodyContent);
 
@@ -28,7 +28,7 @@ public class PostMethodsUsers {
     private Iterator<Object[]> getBodyContent(){
         Collection<Object[]> data = new ArrayList<>();
         for (int i = 0; i < 300; i++){
-            String bodyContent = CreateBodyContent.getBodyContentUsers();
+            String bodyContent = CreateBodyContent.getBodyContentCompanies();
             JSONObject newUser = new JSONObject(bodyContent);
             data.add(new Object[] {newUser.toString()});
         }

@@ -29,7 +29,10 @@
         <classes>
             <class name="apiTesting.GetMethodsUsers"></class>
             <class name="apiTesting.PostMethodsUsers"></class>
-            <class name="apiTesting.RemoveEven"></class>
+            <class name="apiTesting.RemoveEvenUsers"></class>
+            <class name="apiTesting.GetMethodsCompanies"></class>
+            <class name="apiTesting.PostMethodsCompanies"></class>
+            <class name="apiTesting.RemoveEvenCompanies"></class>
         </classes>
     </test>
 </suite>
